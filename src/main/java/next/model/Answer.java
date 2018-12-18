@@ -13,11 +13,12 @@ public class Answer {
 
     private long questionId;
 
+    private int countOfAnswer;
     public Answer(String writer, String contents, long questionId) {
         this(0, writer, contents, new Date(), questionId);
     }
 
-    public Answer(long answerId, String writer, String contents, Date createdDate, long questionId) {
+    public Answer(long questionId, String writer, String contents, Date createdDate, long answerId) {
         this.answerId = answerId;
         this.writer = writer;
         this.contents = contents;
@@ -48,7 +49,14 @@ public class Answer {
     public long getQuestionId() {
         return questionId;
     }
-
+    
+    public int getCountOfAnswer() {
+    	return countOfAnswer;
+    }
+    
+    public void setCountOfAnswer(int count) {
+    	this.countOfAnswer = count;
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
