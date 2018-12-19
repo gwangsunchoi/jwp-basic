@@ -123,6 +123,20 @@ public class AnswerDao {
 
 	    	
 
-	    }};
+	    }
+	    public void update(Answer answer,Long answerId) {
+
+	    	
+
+			JdbcTemplate jdbcTemplate = new JdbcTemplate();
+
+			
+
+			String sql = "UPDATE ANSWERS set contents = ? WHERE answerId = ?";
+
+	        jdbcTemplate.update(sql, answer.getContents(), answer.getAnswerId());
+
+		}	    
+};
 
  

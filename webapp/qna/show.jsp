@@ -76,7 +76,7 @@
 
                           <li>
 
-                              <a class="link-modify-article" href="#">수정</a>
+                              <a class="link-modify-article" href="/qna/updateForm?questionId=${question.questionId}" >수정</a>
 
                           </li>
 
@@ -104,16 +104,17 @@
 
               </article>
 
-
+ 
 
               <div class="qna-comment">
 
-                  <div class="qna-comment-slipp">
-                  <div id = "countAnswer">
-                  <p class = "qna-comment-count"><strong>${question.countOfAnswer}</strong>개의 의견</p>
-                  </div>
+                  <div class="qna-comment-slipp" >
+
+                 	 <div id="countAnswer">
 
                       <p class="qna-comment-count"><strong>${question.countOfAnswer}</strong>개의 의견</p>
+
+                      </div>
 
                       <div class="qna-comment-slipp-articles">
 
@@ -155,13 +156,13 @@
 
                                       <li>
 
-                                          <a class="link-modify-article" href="#">수정</a>
+                                          <a class="link-modify-article" href="/api/qna/updateFormAnswer?answerId=${each.answerId}">수정</a>
 
                                       </li>
 
                                       <li>
 
-                                          <form class="form-delete"  method="POST">
+                                          <form class="form-delete" method="POST">
 
                                               <input type="hidden" name="answerId" value="${each.answerId}">
 
@@ -225,6 +226,7 @@
 
 </div>
 
+ 
 
 <script type="text/template" id="answerTemplate">
 
@@ -260,13 +262,13 @@
 
                   <li>
 
-                      <a class="link-modify-article" href="/api/qna/updateAnswer/{3}">수정</a>
+                      <a class="link-modify-article" href="/api/qna/updateFormAnswer?answerId={3}">수정</a>
 
                   </li>
 
                   <li>
 
-                      <form class="form-delete"  method="POST">
+                      <form class="form-delete" method="POST">
 
                           <input type="hidden" name="answerId" value="{4}">
 
@@ -286,10 +288,13 @@
 
 </script>
 
-<script type="text/template" id="countTemplate">
-	<p class="qna-comment-count"><strong>${0}</strong>개의 의견</p>
-</script>	
+ 
 
+<script type="text/template" id="countTemplate">
+
+  <p class="qna-comment-count"><strong>{o}</strong>개의 의견</p>
+
+</script>
 
 <%@ include file="/include/footer.jspf" %>
 

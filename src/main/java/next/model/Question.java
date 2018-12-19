@@ -80,6 +80,14 @@ public class Question {
 		
 	}
 	
+	
+	public void update(Question newQuestion) {
+
+        this.title = newQuestion.title;
+
+        this.contents = newQuestion.contents;
+
+    }
 
 	@Override
 	public String toString() {
