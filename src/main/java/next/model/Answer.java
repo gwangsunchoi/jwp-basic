@@ -18,7 +18,7 @@ public class Answer {
         this(0, writer, contents, new Date(), questionId);
     }
 
-    public Answer(long questionId, String writer, String contents, Date createdDate, long answerId) {
+    public Answer(long answerId, String writer, String contents, Date createdDate, long questionId) {
         this.answerId = answerId;
         this.writer = writer;
         this.contents = contents;

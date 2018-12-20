@@ -78,7 +78,7 @@ public class RequestMapping {
         
         mappings.put("/api/qna/addAnswer", new AddAnswerController());
         
-        mappings.put("/api/qna/DeleteAnswer", new DeleteAnswerController());
+        mappings.put("/api/qna/deleteAnswer", new DeleteAnswerController());
         
         mappings.put("/api/qna/updateAnswer", new UpdateAnswerController());
 

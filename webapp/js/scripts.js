@@ -84,7 +84,7 @@ $(".qna-comment").on("click",".form-delete",deleteAnswer);
 
 function deleteAnswer(e){
 
-alert("Here");
+
 
 	e.preventDefault();
 
@@ -92,7 +92,7 @@ alert("Here");
 
 	var queryString = deleteBtn.closest("form").serialize();
 
-	alert("Here Too");
+	
 
 	$.ajax({
 
@@ -112,7 +112,7 @@ alert("Here");
 
 		success : function(json, status){
 
-			alert("Here Three");
+			
 
 					if(json.status){
 
